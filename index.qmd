@@ -1,7 +1,32 @@
 ---
 title: "Rohith Krishna"
+about:
+  template: trestles
+  image: images/profile.jpg
+  image-shape: round
+  image-width: 14em
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/rohith-krishna-b6a2b711b
+    - icon: github
+      text: GitHub
+      href: https://github.com/rohithkrishna99
+    - icon: envelope
+      text: Email
+      href: mailto:tcrohithkrishna1999@gmail.com
+    - icon: file-earmark-pdf
+      text: CV
+      href: cv/Rohith Krishna - Business Analyst.pdf
+      target: _blank
 ---
 
-This is a Quarto website.
+## Hi, I'm Rohith {.unnumbered}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I'm a **Business Analyst with hands-on Product Management experience**, currently pursuing my MSc in Business Analytics at Dublin City University.
+
+Over the past several years, I've worked as a **Business Analyst and Scrum Product Owner**, bridging the gap between business stakeholders and engineering teams — translating requirements into product roadmaps, owning backlogs, and delivering features that create measurable business value in Agile environments.
+
+I'm now **combining my business analysis and product management background with deeper expertise in analytics, machine learning, and strategy management** through my MSc at DCU. My goal is to evolve into roles that sit at the intersection of data-driven decision-making and product strategy — where understanding users, designing solutions, and leveraging ML-powered insights come together.
+
+This portfolio showcases my academic projects, technical capabilities, and the professional journey I'm building.

@@ -1,0 +1,73 @@
+---
+title: "Reflection"
+subtitle: "What I learned building this portfolio"
+---
+
+## Overview
+
+Building this ePortfolio has been one of the most **practical learning experiences** of my MSc journey so far. It pushed me beyond traditional coursework into the world of web development, version control, and reproducible data science — skills that are increasingly essential in modern analytics roles.
+
+::: {.callout-note}
+## Key Takeaway
+The real value wasn't just learning tools — it was learning how professional data scientists share their work with the world.
+:::
+
+## Git and Version Control
+
+When I first encountered Git, I found the concept of commits, branches, and remote repositories genuinely confusing. The idea that every change could be tracked, reversed, or branched felt abstract compared to simply saving a Word document.
+
+However, as I worked through this project, Git started to make sense:
+
+- **Commits became checkpoints** I could return to if something broke
+- **Meaningful commit messages** helped me track my own progress
+- **GitHub Pages** turned version control into a live publishing system
+
+I now understand why the industry standard for any data or software work involves Git — it's not just version control, it's **collaboration infrastructure**.
+
+## Quarto and Web Publishing
+
+Quarto was a revelation. Being able to write a single `.qmd` file that contains prose, Python code, tables, and diagrams — and have it render into a professional website — changes how I think about communicating analysis.
+
+What I particularly appreciated:
+
+- **Executable code chunks** mean my charts are reproducible, not screenshots
+- **Markdown + YAML** is much more powerful than I expected
+- **Bootswatch themes and SCSS** let me customise without deep CSS knowledge
+
+## Python for Data Storytelling
+
+Both of my featured projects — **Customer Churn Prediction** and **Fraud Detection** — taught me that model performance is only half the story. The other half is **communication**:
+
+- Converting Matplotlib charts to interactive Plotly visualisations transformed how readers engage with my findings
+- Writing code with `code-fold: true` lets non-technical stakeholders read the narrative while still offering full transparency
+- Adding Mermaid diagrams made model pipelines immediately understandable
+
+## Challenges Overcome
+
+| Challenge | How I Solved It |
+|-----------|----------------|
+| First Git push failures | Learned about Personal Access Tokens and branch configuration |
+| 404 errors on GitHub Pages | Discovered case-sensitivity issues in folder names |
+| SCSS theme not applying | Fixed by correctly structuring `scss:defaults` and `scss:rules` sections |
+| Missing frontmatter in project pages | Understood how YAML metadata drives the Quarto listing feature |
+
+## Skills Acquired
+
+- [x] Git and version control fundamentals
+- [x] Quarto website publishing and theming
+- [x] Python data visualisation with Plotly
+- [x] SCSS styling and Bootswatch customisation
+- [x] Markdown authoring (callouts, equations, diagrams)
+- [x] Reproducible data storytelling
+- [ ] Advanced CI/CD pipelines (future goal)
+
+## Looking Forward
+
+The skills from this module extend far beyond academic assignments. In my target career path — combining **AI adoption, business transformation, and analytics consulting** — the ability to publish reproducible, well-documented analysis is a competitive advantage.
+
+::: {.callout-tip}
+## Going Forward
+I plan to maintain this portfolio as a living document, adding new projects, refining existing ones, and using it as my primary professional showcase for graduate roles.
+:::
+
+The combination of **technical rigour** (Python, ML, statistics) with **communication craft** (Quarto, visualisation, writing) is exactly the profile that modern analytics roles demand. This project helped me see — clearly — where my strengths are and where I want to keep growing.

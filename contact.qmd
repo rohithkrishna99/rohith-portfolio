@@ -1,0 +1,43 @@
+---
+title: "Contact"
+subtitle: "Let's connect"
+---
+
+## Get in Touch
+
+I'm always open to connecting with professionals, recruiters, and fellow students in the **data analytics, machine learning, and business transformation** space. Whether you'd like to discuss a project, explore a collaboration, or just chat about analytics, feel free to reach out.
+
+::: {.callout-note}
+## Based in
+Dublin / Waterford, Ireland — open to opportunities across Ireland, the UK, and remote roles globally.
+:::
+
+## Reach Me At
+
+| Channel | Details |
+|---------|---------|
+| **Email** | [tcrohithkrishna1999@gmail.com](mailto:crohithkrishna1999@gmail.com) |
+| **LinkedIn** | [linkedin.com/in/linkedin.com/in/rohith-krishna-b6a2b711b](https://linkedin.com/in/rohith-krishna-b6a2b711b) |
+| **GitHub** | [github.com/rohithkrishna99](https://github.com/rohithkrishna99) |
+| **Location** | Ireland |
+
+## Professional References
+
+Professional and academic references are **available upon request**. Please reach out via email for references from:
+
+- My MSc programme supervisors at Dublin City University
+- Former managers at IBS Software Ltd, Tata Technologies, and TCS
+- Project collaborators and teammates
+
+## What I'm Looking For
+
+::: {.callout-tip}
+## Open To
+- **Graduate / Analyst roles** in AI-powered business transformation
+- **Business Analyst** and **Product owner** positions
+- **Consulting opportunities** in analytics and digital transformation
+- **Internships** aligned with MSc Business Analytics
+- postions that require Analytics and Machine learning expertise
+:::
+
+Thanks for visiting my portfolio. I look forward to hearing from you.

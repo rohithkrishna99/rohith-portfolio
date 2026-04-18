@@ -2,9 +2,58 @@
   {
     "objectID": "reflection.html",
     "href": "reflection.html",
-    "title": "",
+    "title": "Reflection",
     "section": "",
-    "text": "Code"
+    "text": "Building this ePortfolio has been one of the most practical learning experiences of my MSc journey so far. It pushed me beyond traditional coursework into the world of web development, version control, and reproducible data science — skills that are increasingly essential in modern analytics roles.\n\n\n\n\n\n\nNoteKey Takeaway\n\n\n\nThe real value wasn’t just learning tools — it was learning how professional data scientists share their work with the world."
+  },
+  {
+    "objectID": "reflection.html#overview",
+    "href": "reflection.html#overview",
+    "title": "Reflection",
+    "section": "",
+    "text": "Building this ePortfolio has been one of the most practical learning experiences of my MSc journey so far. It pushed me beyond traditional coursework into the world of web development, version control, and reproducible data science — skills that are increasingly essential in modern analytics roles.\n\n\n\n\n\n\nNoteKey Takeaway\n\n\n\nThe real value wasn’t just learning tools — it was learning how professional data scientists share their work with the world."
+  },
+  {
+    "objectID": "reflection.html#git-and-version-control",
+    "href": "reflection.html#git-and-version-control",
+    "title": "Reflection",
+    "section": "Git and Version Control",
+    "text": "Git and Version Control\nWhen I first encountered Git, I found the concept of commits, branches, and remote repositories genuinely confusing. The idea that every change could be tracked, reversed, or branched felt abstract compared to simply saving a Word document.\nHowever, as I worked through this project, Git started to make sense:\n\nCommits became checkpoints I could return to if something broke\nMeaningful commit messages helped me track my own progress\nGitHub Pages turned version control into a live publishing system\n\nI now understand why the industry standard for any data or software work involves Git — it’s not just version control, it’s collaboration infrastructure."
+  },
+  {
+    "objectID": "reflection.html#quarto-and-web-publishing",
+    "href": "reflection.html#quarto-and-web-publishing",
+    "title": "Reflection",
+    "section": "Quarto and Web Publishing",
+    "text": "Quarto and Web Publishing\nQuarto was a revelation. Being able to write a single .qmd file that contains prose, Python code, tables, and diagrams — and have it render into a professional website — changes how I think about communicating analysis.\nWhat I particularly appreciated:\n\nExecutable code chunks mean my charts are reproducible, not screenshots\nMarkdown + YAML is much more powerful than I expected\nBootswatch themes and SCSS let me customise without deep CSS knowledge"
+  },
+  {
+    "objectID": "reflection.html#python-for-data-storytelling",
+    "href": "reflection.html#python-for-data-storytelling",
+    "title": "Reflection",
+    "section": "Python for Data Storytelling",
+    "text": "Python for Data Storytelling\nBoth of my featured projects — Customer Churn Prediction and Fraud Detection — taught me that model performance is only half the story. The other half is communication:\n\nConverting Matplotlib charts to interactive Plotly visualisations transformed how readers engage with my findings\nWriting code with code-fold: true lets non-technical stakeholders read the narrative while still offering full transparency\nAdding Mermaid diagrams made model pipelines immediately understandable"
+  },
+  {
+    "objectID": "reflection.html#challenges-overcome",
+    "href": "reflection.html#challenges-overcome",
+    "title": "Reflection",
+    "section": "Challenges Overcome",
+    "text": "Challenges Overcome\n\n\n\n\n\n\n\nChallenge\nHow I Solved It\n\n\n\n\nFirst Git push failures\nLearned about Personal Access Tokens and branch configuration\n\n\n404 errors on GitHub Pages\nDiscovered case-sensitivity issues in folder names\n\n\nSCSS theme not applying\nFixed by correctly structuring scss:defaults and scss:rules sections\n\n\nMissing frontmatter in project pages\nUnderstood how YAML metadata drives the Quarto listing feature"
+  },
+  {
+    "objectID": "reflection.html#skills-acquired",
+    "href": "reflection.html#skills-acquired",
+    "title": "Reflection",
+    "section": "Skills Acquired",
+    "text": "Skills Acquired\n\nGit and version control fundamentals\nQuarto website publishing and theming\nPython data visualisation with Plotly\nSCSS styling and Bootswatch customisation\nMarkdown authoring (callouts, equations, diagrams)\nReproducible data storytelling\nAdvanced CI/CD pipelines (future goal)"
+  },
+  {
+    "objectID": "reflection.html#looking-forward",
+    "href": "reflection.html#looking-forward",
+    "title": "Reflection",
+    "section": "Looking Forward",
+    "text": "Looking Forward\nThe skills from this module extend far beyond academic assignments. In my target career path — combining AI adoption, business transformation, and analytics consulting — the ability to publish reproducible, well-documented analysis is a competitive advantage.\n\n\n\n\n\n\nTipGoing Forward\n\n\n\nI plan to maintain this portfolio as a living document, adding new projects, refining existing ones, and using it as my primary professional showcase for graduate roles.\n\n\nThe combination of technical rigour (Python, ML, statistics) with communication craft (Quarto, visualisation, writing) is exactly the profile that modern analytics roles demand. This project helped me see — clearly — where my strengths are and where I want to keep growing."
   },
   {
     "objectID": "projects/index.html",
@@ -16,22 +65,106 @@
   {
     "objectID": "contact.html",
     "href": "contact.html",
-    "title": "",
+    "title": "Contact",
     "section": "",
-    "text": "Code"
+    "text": "I’m always open to connecting with professionals, recruiters, and fellow students in the data analytics, machine learning, and business transformation space. Whether you’d like to discuss a project, explore a collaboration, or just chat about analytics, feel free to reach out.\n\n\n\n\n\n\nNoteBased in\n\n\n\nDublin / Waterford, Ireland — open to opportunities across Ireland, the UK, and remote roles globally."
+  },
+  {
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Contact",
+    "section": "",
+    "text": "I’m always open to connecting with professionals, recruiters, and fellow students in the data analytics, machine learning, and business transformation space. Whether you’d like to discuss a project, explore a collaboration, or just chat about analytics, feel free to reach out.\n\n\n\n\n\n\nNoteBased in\n\n\n\nDublin / Waterford, Ireland — open to opportunities across Ireland, the UK, and remote roles globally."
+  },
+  {
+    "objectID": "contact.html#reach-me-at",
+    "href": "contact.html#reach-me-at",
+    "title": "Contact",
+    "section": "Reach Me At",
+    "text": "Reach Me At\n\n\n\nChannel\nDetails\n\n\n\n\nEmail\ntcrohithkrishna1999@gmail.com\n\n\nLinkedIn\nlinkedin.com/in/linkedin.com/in/rohith-krishna-b6a2b711b\n\n\nGitHub\ngithub.com/rohithkrishna99\n\n\nLocation\nIreland"
+  },
+  {
+    "objectID": "contact.html#professional-references",
+    "href": "contact.html#professional-references",
+    "title": "Contact",
+    "section": "Professional References",
+    "text": "Professional References\nProfessional and academic references are available upon request. Please reach out via email for references from:\n\nMy MSc programme supervisors at Dublin City University\nFormer managers at IBS Software Ltd, Tata Technologies, and TCS\nProject collaborators and teammates"
+  },
+  {
+    "objectID": "contact.html#what-im-looking-for",
+    "href": "contact.html#what-im-looking-for",
+    "title": "Contact",
+    "section": "What I’m Looking For",
+    "text": "What I’m Looking For\n\n\n\n\n\n\nTipOpen To\n\n\n\n\nGraduate / Analyst roles in AI-powered business transformation\nBusiness Analyst and Product owner positions\nConsulting opportunities in analytics and digital transformation\nInternships aligned with MSc Business Analytics\npostions that require Analytics and Machine learning expertise\n\n\n\nThanks for visiting my portfolio. I look forward to hearing from you."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "About this site"
+    "text": "I’m a Business Analyst with hands-on Product Management experience, currently pursuing my MSc in Business Analytics at Dublin City University. I relocated to Ireland in September 2025 to begin my postgraduate journey and deepen my expertise in analytics, machine learning, and strategic decision-making.\nMy professional identity sits at the intersection of business analysis, product ownership, and data-driven strategy. I’ve spent the early years of my career working closely with engineering teams, stakeholders, and end users — understanding problems deeply before shaping the solutions that address them."
+  },
+  {
+    "objectID": "about.html#who-i-am",
+    "href": "about.html#who-i-am",
+    "title": "About Me",
+    "section": "",
+    "text": "I’m a Business Analyst with hands-on Product Management experience, currently pursuing my MSc in Business Analytics at Dublin City University. I relocated to Ireland in September 2025 to begin my postgraduate journey and deepen my expertise in analytics, machine learning, and strategic decision-making.\nMy professional identity sits at the intersection of business analysis, product ownership, and data-driven strategy. I’ve spent the early years of my career working closely with engineering teams, stakeholders, and end users — understanding problems deeply before shaping the solutions that address them."
+  },
+  {
+    "objectID": "about.html#professional-background",
+    "href": "about.html#professional-background",
+    "title": "About Me",
+    "section": "Professional Background",
+    "text": "Professional Background\nBefore starting my MSc, I worked extensively as a Business Analyst and Scrum Product Owner in fast-paced Agile environments. My work typically involved:\n\n\n\n\n\n\nNoteCore Responsibilities\n\n\n\n\nGathering and analysing business requirements from cross-functional stakeholders\nOwning and prioritising product backlogs in Scrum teams\nTranslating business needs into user stories, acceptance criteria, and sprint goals\nCollaborating daily with developers, designers, and QA to deliver iterative value\nUsing data to validate product decisions and measure outcomes\n\n\n\nThis foundation gave me a practical understanding of how products are actually built — the trade-offs, the stakeholder dynamics, and the importance of clear communication. It also showed me where analytics and ML can elevate product decisions from intuition-based to evidence-based."
+  },
+  {
+    "objectID": "about.html#why-an-msc-in-business-analytics",
+    "href": "about.html#why-an-msc-in-business-analytics",
+    "title": "About Me",
+    "section": "Why an MSc in Business Analytics",
+    "text": "Why an MSc in Business Analytics\nAfter several years in business analysis and product ownership, I became increasingly aware of a gap in my toolkit: while I could facilitate decisions and translate between business and technical teams, I wanted to personally own the analytical and machine learning work that drives modern product strategy.\nThe MSc Business Analytics at DCU is where I’m building that capability — covering machine learning, statistical modelling, business transformation, new venture strategy, and AI ethics. I’m combining my prior experience with new technical depth to position myself for roles that go beyond traditional BA work."
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "About Me",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\n\n\n\n\n\n\nCategory\nTools & Technologies\n\n\n\n\nProgramming\nPython, SQL\n\n\nMachine Learning\nXGBoost, Random Forest, Logistic Regression, BERT, Scikit-learn\n\n\nData Analysis\nPandas, NumPy, SciPy, SMOTE\n\n\nVisualisation\nPlotly, Matplotlib, Seaborn, Tableau, Power BI\n\n\nProduct & BA Tools\nJira, Confluence, Figma\n\n\nAgile / Scrum\nBacklog grooming, sprint planning, user story mapping, stakeholder management\n\n\nDeveloper Tools\nQuarto, Git/GitHub, Jupyter, VS Code"
+  },
+  {
+    "objectID": "about.html#soft-skills-strengths",
+    "href": "about.html#soft-skills-strengths",
+    "title": "About Me",
+    "section": "Soft Skills & Strengths",
+    "text": "Soft Skills & Strengths\n\nStakeholder engagement — building trust across business and technical audiences\nRequirements analysis — asking the right questions before writing a line of code\nProduct ownership — balancing urgency, value, and feasibility in prioritisation\nCross-functional collaboration — comfortable bridging business, design, and engineering\nWorkflow improvement — identifying inefficiencies and designing better processes\nAI adoption mindset — thinking about how ML integrates into real product journeys"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\nMSc Business Analytics — Dublin City University (September 2025 – Present) Focus areas: Machine Learning, Statistical Modelling, New Venture Strategy, Business Transformation, Ethical AI"
+  },
+  {
+    "objectID": "about.html#what-im-working-towards",
+    "href": "about.html#what-im-working-towards",
+    "title": "About Me",
+    "section": "What I’m Working Towards",
+    "text": "What I’m Working Towards\n\n\n\n\n\n\nTipCareer Goals\n\n\n\nI’m aiming for roles that combine product thinking with analytical depth — such as Product Analyst, Analytics Product Manager, AI/ML Business Analyst, or Data-Driven Consultant. Companies investing in AI adoption, digital transformation, or analytics-led product strategy are where I see my next step.\n\n\nOutside of academics and work, I enjoy fitness, reading, and staying curious about how emerging technologies — particularly generative AI — are reshaping how businesses operate."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Rohith Krishna",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "I’m a Business Analyst with hands-on Product Management experience, currently pursuing my MSc in Business Analytics at Dublin City University.\nOver the past several years, I’ve worked as a Business Analyst and Scrum Product Owner, bridging the gap between business stakeholders and engineering teams — translating requirements into product roadmaps, owning backlogs, and delivering features that create measurable business value in Agile environments.\nI’m now combining my business analysis and product management background with deeper expertise in analytics, machine learning, and strategy management through my MSc at DCU. My goal is to evolve into roles that sit at the intersection of data-driven decision-making and product strategy — where understanding users, designing solutions, and leveraging ML-powered insights come together.\nThis portfolio showcases my academic projects, technical capabilities, and the professional journey I’m building."
+  },
+  {
+    "objectID": "index.html#hi-im-rohith",
+    "href": "index.html#hi-im-rohith",
+    "title": "Rohith Krishna",
+    "section": "",
+    "text": "I’m a Business Analyst with hands-on Product Management experience, currently pursuing my MSc in Business Analytics at Dublin City University.\nOver the past several years, I’ve worked as a Business Analyst and Scrum Product Owner, bridging the gap between business stakeholders and engineering teams — translating requirements into product roadmaps, owning backlogs, and delivering features that create measurable business value in Agile environments.\nI’m now combining my business analysis and product management background with deeper expertise in analytics, machine learning, and strategy management through my MSc at DCU. My goal is to evolve into roles that sit at the intersection of data-driven decision-making and product strategy — where understanding users, designing solutions, and leveraging ML-powered insights come together.\nThis portfolio showcases my academic projects, technical capabilities, and the professional journey I’m building."
   }
 ]

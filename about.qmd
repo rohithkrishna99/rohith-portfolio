@@ -1,5 +1,66 @@
 ---
-title: "About"
+title: "About Me"
+subtitle: "Business Analyst | Product Owner | MSc Business Analytics Candidate"
 ---
 
-About this site
+## Who I Am
+
+I'm a **Business Analyst with hands-on Product Management experience**, currently pursuing my **MSc in Business Analytics at Dublin City University**. I relocated to Ireland in September 2025 to begin my postgraduate journey and deepen my expertise in analytics, machine learning, and strategic decision-making.
+
+My professional identity sits at the intersection of **business analysis, product ownership, and data-driven strategy**. I've spent the early years of my career working closely with engineering teams, stakeholders, and end users — understanding problems deeply before shaping the solutions that address them.
+
+## Professional Background
+
+Before starting my MSc, I worked extensively as a **Business Analyst and Scrum Product Owner** in fast-paced Agile environments. My work typically involved:
+
+::: {.callout-note}
+## Core Responsibilities
+- Gathering and analysing business requirements from cross-functional stakeholders
+- Owning and prioritising product backlogs in Scrum teams
+- Translating business needs into user stories, acceptance criteria, and sprint goals
+- Collaborating daily with developers, designers, and QA to deliver iterative value
+- Using data to validate product decisions and measure outcomes
+:::
+
+This foundation gave me a practical understanding of **how products are actually built** — the trade-offs, the stakeholder dynamics, and the importance of clear communication. It also showed me where analytics and ML can elevate product decisions from intuition-based to evidence-based.
+
+## Why an MSc in Business Analytics
+
+After several years in business analysis and product ownership, I became increasingly aware of a gap in my toolkit: while I could facilitate decisions and translate between business and technical teams, I wanted to **personally own the analytical and machine learning work** that drives modern product strategy.
+
+The **MSc Business Analytics at DCU** is where I'm building that capability — covering machine learning, statistical modelling, business transformation, new venture strategy, and AI ethics. I'm combining my prior experience with new technical depth to position myself for roles that go beyond traditional BA work.
+
+## Technical Skills
+
+| Category | Tools & Technologies |
+|----------|---------------------|
+| **Programming** | Python, SQL |
+| **Machine Learning** | XGBoost, Random Forest, Logistic Regression, BERT, Scikit-learn |
+| **Data Analysis** | Pandas, NumPy, SciPy, SMOTE |
+| **Visualisation** | Plotly, Matplotlib, Seaborn, Tableau, Power BI |
+| **Product & BA Tools** | Jira, Confluence, Figma |
+| **Agile / Scrum** | Backlog grooming, sprint planning, user story mapping, stakeholder management |
+| **Developer Tools** | Quarto, Git/GitHub, Jupyter, VS Code |
+
+## Soft Skills & Strengths
+
+- **Stakeholder engagement** — building trust across business and technical audiences
+- **Requirements analysis** — asking the right questions before writing a line of code
+- **Product ownership** — balancing urgency, value, and feasibility in prioritisation
+- **Cross-functional collaboration** — comfortable bridging business, design, and engineering
+- **Workflow improvement** — identifying inefficiencies and designing better processes
+- **AI adoption mindset** — thinking about how ML integrates into real product journeys
+
+## Education
+
+**MSc Business Analytics** — Dublin City University *(September 2025 – Present)*
+Focus areas: Machine Learning, Statistical Modelling, New Venture Strategy, Business Transformation, Ethical AI
+
+## What I'm Working Towards
+
+::: {.callout-tip}
+## Career Goals
+I'm aiming for roles that combine **product thinking with analytical depth** — such as Product Analyst, Analytics Product Manager, AI/ML Business Analyst, or Data-Driven Consultant. Companies investing in AI adoption, digital transformation, or analytics-led product strategy are where I see my next step.
+:::
+
+Outside of academics and work, I enjoy fitness, reading, and staying curious about how emerging technologies — particularly generative AI — are reshaping how businesses operate.
