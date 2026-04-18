@@ -56,6 +56,13 @@
     "text": "Looking Forward\nThe skills from this module extend far beyond academic assignments. In my target career path — combining AI adoption, business transformation, and analytics consulting — the ability to publish reproducible, well-documented analysis is a competitive advantage.\n\n\n\n\n\n\nTipGoing Forward\n\n\n\nI plan to maintain this portfolio as a living document, adding new projects, refining existing ones, and using it as my primary professional showcase for graduate roles.\n\n\nThe combination of technical rigour (Python, ML, statistics) with communication craft (Quarto, visualisation, writing) is exactly the profile that modern analytics roles demand. This project helped me see — clearly — where my strengths are and where I want to keep growing."
   },
   {
+    "objectID": "projects/list/churn-prediction.html",
+    "href": "projects/list/churn-prediction.html",
+    "title": "Customer Churn Prediction for E-Commerce",
+    "section": "",
+    "text": "✕"
+  },
+  {
     "objectID": "projects/list/churn-prediction.html#overview",
     "href": "projects/list/churn-prediction.html#overview",
     "title": "Customer Churn Prediction for E-Commerce",
@@ -222,6 +229,13 @@
     "title": "Projects",
     "section": "",
     "text": "Customer Churn Prediction for E-Commerce\n\n\n\nMachine Learning\n\nXGBoost\n\nPython\n\nClassification\n\n\n\nXGBoost, Random Forest and Logistic Regression to predict customer churn using RFM features on 286,000 e-commerce transactions\n\n\n\nRohith Krishna Thazhathethil Chandraprakash\n\n\nDec 3, 2025\n\n\n\n\n\n\n\n\n\n\n\nFraud Detection Analysis\n\n\n\nMachine Learning\n\nFraud Detection\n\nPython\n\nStatistics\n\n\n\nStatistical and ML-based fraud detection using Logistic Regression and Random Forest on 500 financial transactions\n\n\n\nRohith Krishna Thazhathethil Chandraprakash\n\n\nMar 1, 2025\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html",
+    "href": "projects/list/fraud-detection.html",
+    "title": "Fraud Detection Analysis",
+    "section": "",
+    "text": "✕"
   },
   {
     "objectID": "projects/list/fraud-detection.html#overview",
