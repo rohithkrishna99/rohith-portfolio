@@ -1,7 +1,153 @@
 ---
-title: "Customer Churn Prediction"
-description: "Predicting customer churn using XGBoost and SMOTE"
-author: "Rohith Kumar"
-date: "2025-01-15"
-categories: [Machine Learning, Python]
+title: "Customer Churn Prediction for E-Commerce"
+description: "XGBoost, Random Forest and Logistic Regression to predict customer churn using RFM features on 286,000 e-commerce transactions"
+author: "Rohith Krishna Thazhathethil Chandraprakash"
+date: "2025-12-03"
+categories: [Machine Learning, XGBoost, Python, Classification]
 ---
+
+## Overview
+
+This group project builds a churn prediction pipeline for an e-commerce
+marketplace. The goal is to identify customers likely to churn in October
+so the CRM team can launch timely retention campaigns.
+
+::: {.callout-note}
+## Dataset
+286,208 transactional records from September 2025, reduced to 279,621
+after outlier removal at the 99th percentile.
+:::
+
+## Model Pipeline
+
+```{mermaid}
+flowchart LR
+  A[Raw Transactions] --> B[Data Cleaning]
+  B --> C[Outlier Removal 99th pct]
+  C --> D[Aggregation to Customer Level]
+  D --> E[RFM Feature Engineering]
+  E --> F[Train/Holdout Split 80/20]
+  F --> G[Logistic Regression]
+  F --> H[Random Forest]
+  F --> I[XGBoost]
+  G --> J[Model Comparison]
+  H --> J
+  I --> J
+  J --> K[XGBoost Selected AUC 0.79]
+```
+
+## Key Results
+
+::: {.callout-tip}
+## Best Model — XGBoost
+- **Holdout AUC:** 0.79
+- **Recall:** 0.77 at default threshold
+- **Predicted churn rate:** ~40% retained for maximum customer capture
+:::
+
+## Model Performance Comparison
+
+```{python}
+#| code-fold: true
+#| fig-cap: "Model performance comparison across Recall, AUC, and Accuracy"
+
+import plotly.graph_objects as go
+
+models = ['Logistic Regression', 'Random Forest', 'XGBoost']
+recall =    [0.65, 0.72, 0.76]
+auc =       [0.76, 0.78, 0.79]
+accuracy =  [0.72, 0.70, 0.68]
+f1 =        [0.44, 0.45, 0.45]
+
+fig = go.Figure()
+fig.add_trace(go.Bar(name='Recall',   x=models, y=recall,   marker_color='#4361EE'))
+fig.add_trace(go.Bar(name='AUC',      x=models, y=auc,      marker_color='#7209B7'))
+fig.add_trace(go.Bar(name='Accuracy', x=models, y=accuracy, marker_color='#F72585'))
+fig.add_trace(go.Bar(name='F1 Score', x=models, y=f1,       marker_color='#4CC9F0'))
+
+fig.update_layout(
+    barmode='group',
+    title='Model Performance Comparison',
+    yaxis=dict(range=[0, 1], title='Score'),
+    xaxis_title='Model',
+    legend_title='Metric',
+    template='plotly_white'
+)
+fig.show()
+```
+
+## Feature Importance (XGBoost)
+
+```{python}
+#| code-fold: true
+#| fig-cap: "Top 14 features driving churn prediction by XGBoost gain score"
+
+import plotly.express as px
+import pandas as pd
+
+features = ['orders', 'Less_Active', 'Days_LastPurchase', 'sales',
+            'Avg_ticket', 'FMCG', 'Low_ticket', 'Home',
+            'Perc_discount', 'FinServices', 'Care&Kids',
+            'Fashion', 'Avg_num_items', 'Electronics']
+
+importance = [261.09, 131.71, 36.79, 33.56,
+              21.96, 19.37, 16.73, 16.18,
+              15.35, 14.05, 12.98,
+              12.98, 12.74, 12.36]
+
+df = pd.DataFrame({'Feature': features, 'Importance (Gain)': importance})
+df = df.sort_values('Importance (Gain)', ascending=True)
+
+fig = px.bar(df, x='Importance (Gain)', y='Feature', orientation='h',
+             title='Top 14 Features — XGBoost (Gain)',
+             color='Importance (Gain)',
+             color_continuous_scale='Viridis')
+fig.update_layout(template='plotly_white', showlegend=False)
+fig.show()
+```
+
+## Churn Rate by Business Unit
+
+```{python}
+#| code-fold: true
+#| fig-cap: "Churn rate varies significantly across product categories, with FinServices standing out at 27.1%"
+
+import plotly.express as px
+import pandas as pd
+
+data = {
+    'Business Unit': ['FinServices', 'Electronics', 'Home',
+                      'Care&Kids', 'Fashion', 'FMCG'],
+    'Churn Rate (%)': [27.1, 10.3, 9.7, 9.2, 9.1, 6.7]
+}
+
+df = pd.DataFrame(data).sort_values('Churn Rate (%)', ascending=True)
+
+fig = px.bar(df, x='Churn Rate (%)', y='Business Unit', orientation='h',
+             title='Churn Rate by Macro Business Unit',
+             color='Churn Rate (%)',
+             color_continuous_scale='Reds')
+fig.update_layout(template='plotly_white')
+fig.show()
+```
+
+## Key Findings
+
+| Feature | Business Insight |
+|---------|-----------------|
+| Orders | Fewer orders = highest churn risk |
+| Less Active | Customers already slowing down are most at risk |
+| Days since last purchase | Long inactivity strongly correlates with churn |
+| FinServices | 27.1% churn — card distribution, not core e-commerce |
+
+## Recommendations
+
+::: {.callout-important}
+## Operational Strategy
+Run XGBoost weekly. Flag top 40% risk customers. Send high-risk/high-value
+segments personalised offers. Use low-cost nudges for high-risk/low-value.
+Monitor recall weekly — retrain if AUC drops more than 5%.
+:::
+
+**Team:** Bolshakova Alina, Budhiraja Raunit, Lucio Pérez Wendy Monserrat,
+Thazhathethil Chandraprakash Rohith Krishna, Yalamanchi Vyshnavi

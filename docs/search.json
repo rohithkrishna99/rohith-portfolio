@@ -56,46 +56,81 @@
     "text": "Looking Forward\nThe skills from this module extend far beyond academic assignments. In my target career path — combining AI adoption, business transformation, and analytics consulting — the ability to publish reproducible, well-documented analysis is a competitive advantage.\n\n\n\n\n\n\nTipGoing Forward\n\n\n\nI plan to maintain this portfolio as a living document, adding new projects, refining existing ones, and using it as my primary professional showcase for graduate roles.\n\n\nThe combination of technical rigour (Python, ML, statistics) with communication craft (Quarto, visualisation, writing) is exactly the profile that modern analytics roles demand. This project helped me see — clearly — where my strengths are and where I want to keep growing."
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
+    "objectID": "projects/list/churn-prediction.html",
+    "href": "projects/list/churn-prediction.html",
+    "title": "Customer Churn Prediction for E-Commerce",
     "section": "",
-    "text": "Customer Churn Prediction\n\n\n\nMachine Learning\n\nPython\n\n\n\nPredicting customer churn using XGBoost and SMOTE\n\n\n\nRohith Kumar\n\n\nJan 15, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "This group project builds a churn prediction pipeline for an e-commerce marketplace. The goal is to identify customers likely to churn in October so the CRM team can launch timely retention campaigns.\n\n\n\n\n\n\nNoteDataset\n\n\n\n286,208 transactional records from September 2025, reduced to 279,621 after outlier removal at the 99th percentile."
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
+    "objectID": "projects/list/churn-prediction.html#overview",
+    "href": "projects/list/churn-prediction.html#overview",
+    "title": "Customer Churn Prediction for E-Commerce",
     "section": "",
-    "text": "I’m always open to connecting with professionals, recruiters, and fellow students in the data analytics, machine learning, and business transformation space. Whether you’d like to discuss a project, explore a collaboration, or just chat about analytics, feel free to reach out.\n\n\n\n\n\n\nNoteBased in\n\n\n\nDublin / Waterford, Ireland — open to opportunities across Ireland, the UK, and remote roles globally."
+    "text": "This group project builds a churn prediction pipeline for an e-commerce marketplace. The goal is to identify customers likely to churn in October so the CRM team can launch timely retention campaigns.\n\n\n\n\n\n\nNoteDataset\n\n\n\n286,208 transactional records from September 2025, reduced to 279,621 after outlier removal at the 99th percentile."
   },
   {
-    "objectID": "contact.html#get-in-touch",
-    "href": "contact.html#get-in-touch",
-    "title": "Contact",
+    "objectID": "projects/list/churn-prediction.html#model-pipeline",
+    "href": "projects/list/churn-prediction.html#model-pipeline",
+    "title": "Customer Churn Prediction for E-Commerce",
+    "section": "Model Pipeline",
+    "text": "Model Pipeline\n\n\n\n\n\nflowchart LR\n  A[Raw Transactions] --&gt; B[Data Cleaning]\n  B --&gt; C[Outlier Removal 99th pct]\n  C --&gt; D[Aggregation to Customer Level]\n  D --&gt; E[RFM Feature Engineering]\n  E --&gt; F[Train/Holdout Split 80/20]\n  F --&gt; G[Logistic Regression]\n  F --&gt; H[Random Forest]\n  F --&gt; I[XGBoost]\n  G --&gt; J[Model Comparison]\n  H --&gt; J\n  I --&gt; J\n  J --&gt; K[XGBoost Selected AUC 0.79]"
+  },
+  {
+    "objectID": "projects/list/churn-prediction.html#key-results",
+    "href": "projects/list/churn-prediction.html#key-results",
+    "title": "Customer Churn Prediction for E-Commerce",
+    "section": "Key Results",
+    "text": "Key Results\n\n\n\n\n\n\nTipBest Model — XGBoost\n\n\n\n\nHoldout AUC: 0.79\nRecall: 0.77 at default threshold\nPredicted churn rate: ~40% retained for maximum customer capture"
+  },
+  {
+    "objectID": "projects/list/churn-prediction.html#model-performance-comparison",
+    "href": "projects/list/churn-prediction.html#model-performance-comparison",
+    "title": "Customer Churn Prediction for E-Commerce",
+    "section": "Model Performance Comparison",
+    "text": "Model Performance Comparison\n\n\nCode\nimport plotly.graph_objects as go\n\nmodels = ['Logistic Regression', 'Random Forest', 'XGBoost']\nrecall =    [0.65, 0.72, 0.76]\nauc =       [0.76, 0.78, 0.79]\naccuracy =  [0.72, 0.70, 0.68]\nf1 =        [0.44, 0.45, 0.45]\n\nfig = go.Figure()\nfig.add_trace(go.Bar(name='Recall',   x=models, y=recall,   marker_color='#4361EE'))\nfig.add_trace(go.Bar(name='AUC',      x=models, y=auc,      marker_color='#7209B7'))\nfig.add_trace(go.Bar(name='Accuracy', x=models, y=accuracy, marker_color='#F72585'))\nfig.add_trace(go.Bar(name='F1 Score', x=models, y=f1,       marker_color='#4CC9F0'))\n\nfig.update_layout(\n    barmode='group',\n    title='Model Performance Comparison',\n    yaxis=dict(range=[0, 1], title='Score'),\n    xaxis_title='Model',\n    legend_title='Metric',\n    template='plotly_white'\n)\nfig.show()\n\n\n                                                \nModel performance comparison across Recall, AUC, and Accuracy"
+  },
+  {
+    "objectID": "projects/list/churn-prediction.html#feature-importance-xgboost",
+    "href": "projects/list/churn-prediction.html#feature-importance-xgboost",
+    "title": "Customer Churn Prediction for E-Commerce",
+    "section": "Feature Importance (XGBoost)",
+    "text": "Feature Importance (XGBoost)\n\n\nCode\nimport plotly.express as px\nimport pandas as pd\n\nfeatures = ['orders', 'Less_Active', 'Days_LastPurchase', 'sales',\n            'Avg_ticket', 'FMCG', 'Low_ticket', 'Home',\n            'Perc_discount', 'FinServices', 'Care&Kids',\n            'Fashion', 'Avg_num_items', 'Electronics']\n\nimportance = [261.09, 131.71, 36.79, 33.56,\n              21.96, 19.37, 16.73, 16.18,\n              15.35, 14.05, 12.98,\n              12.98, 12.74, 12.36]\n\ndf = pd.DataFrame({'Feature': features, 'Importance (Gain)': importance})\ndf = df.sort_values('Importance (Gain)', ascending=True)\n\nfig = px.bar(df, x='Importance (Gain)', y='Feature', orientation='h',\n             title='Top 14 Features — XGBoost (Gain)',\n             color='Importance (Gain)',\n             color_continuous_scale='Viridis')\nfig.update_layout(template='plotly_white', showlegend=False)\nfig.show()\n\n\n                                                \nTop 14 features driving churn prediction by XGBoost gain score"
+  },
+  {
+    "objectID": "projects/list/churn-prediction.html#churn-rate-by-business-unit",
+    "href": "projects/list/churn-prediction.html#churn-rate-by-business-unit",
+    "title": "Customer Churn Prediction for E-Commerce",
+    "section": "Churn Rate by Business Unit",
+    "text": "Churn Rate by Business Unit\n\n\nCode\nimport plotly.express as px\nimport pandas as pd\n\ndata = {\n    'Business Unit': ['FinServices', 'Electronics', 'Home',\n                      'Care&Kids', 'Fashion', 'FMCG'],\n    'Churn Rate (%)': [27.1, 10.3, 9.7, 9.2, 9.1, 6.7]\n}\n\ndf = pd.DataFrame(data).sort_values('Churn Rate (%)', ascending=True)\n\nfig = px.bar(df, x='Churn Rate (%)', y='Business Unit', orientation='h',\n             title='Churn Rate by Macro Business Unit',\n             color='Churn Rate (%)',\n             color_continuous_scale='Reds')\nfig.update_layout(template='plotly_white')\nfig.show()\n\n\n                                                \nChurn rate varies significantly across product categories, with FinServices standing out at 27.1%"
+  },
+  {
+    "objectID": "projects/list/churn-prediction.html#key-findings",
+    "href": "projects/list/churn-prediction.html#key-findings",
+    "title": "Customer Churn Prediction for E-Commerce",
+    "section": "Key Findings",
+    "text": "Key Findings\n\n\n\n\n\n\n\nFeature\nBusiness Insight\n\n\n\n\nOrders\nFewer orders = highest churn risk\n\n\nLess Active\nCustomers already slowing down are most at risk\n\n\nDays since last purchase\nLong inactivity strongly correlates with churn\n\n\nFinServices\n27.1% churn — card distribution, not core e-commerce"
+  },
+  {
+    "objectID": "projects/list/churn-prediction.html#recommendations",
+    "href": "projects/list/churn-prediction.html#recommendations",
+    "title": "Customer Churn Prediction for E-Commerce",
+    "section": "Recommendations",
+    "text": "Recommendations\n\n\n\n\n\n\nImportantOperational Strategy\n\n\n\nRun XGBoost weekly. Flag top 40% risk customers. Send high-risk/high-value segments personalised offers. Use low-cost nudges for high-risk/low-value. Monitor recall weekly — retrain if AUC drops more than 5%.\n\n\nTeam: Bolshakova Alina, Budhiraja Raunit, Lucio Pérez Wendy Monserrat, Thazhathethil Chandraprakash Rohith Krishna, Yalamanchi Vyshnavi"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Rohith Krishna",
     "section": "",
-    "text": "I’m always open to connecting with professionals, recruiters, and fellow students in the data analytics, machine learning, and business transformation space. Whether you’d like to discuss a project, explore a collaboration, or just chat about analytics, feel free to reach out.\n\n\n\n\n\n\nNoteBased in\n\n\n\nDublin / Waterford, Ireland — open to opportunities across Ireland, the UK, and remote roles globally."
+    "text": "I’m a Business Analyst with hands-on Product Management experience, currently pursuing my MSc in Business Analytics at Dublin City University.\nOver the past several years, I’ve worked as a Business Analyst and Scrum Product Owner, bridging the gap between business stakeholders and engineering teams — translating requirements into product roadmaps, owning backlogs, and delivering features that create measurable business value in Agile environments.\nI’m now combining my business analysis and product management background with deeper expertise in analytics, machine learning, and strategy management through my MSc at DCU. My goal is to evolve into roles that sit at the intersection of data-driven decision-making and product strategy — where understanding users, designing solutions, and leveraging ML-powered insights come together.\nThis portfolio showcases my academic projects, technical capabilities, and the professional journey I’m building."
   },
   {
-    "objectID": "contact.html#reach-me-at",
-    "href": "contact.html#reach-me-at",
-    "title": "Contact",
-    "section": "Reach Me At",
-    "text": "Reach Me At\n\n\n\nChannel\nDetails\n\n\n\n\nEmail\ntcrohithkrishna1999@gmail.com\n\n\nLinkedIn\nlinkedin.com/in/linkedin.com/in/rohith-krishna-b6a2b711b\n\n\nGitHub\ngithub.com/rohithkrishna99\n\n\nLocation\nIreland"
-  },
-  {
-    "objectID": "contact.html#professional-references",
-    "href": "contact.html#professional-references",
-    "title": "Contact",
-    "section": "Professional References",
-    "text": "Professional References\nProfessional and academic references are available upon request. Please reach out via email for references from:\n\nMy MSc programme supervisors at Dublin City University\nFormer managers at IBS Software Ltd, Tata Technologies, and TCS\nProject collaborators and teammates"
-  },
-  {
-    "objectID": "contact.html#what-im-looking-for",
-    "href": "contact.html#what-im-looking-for",
-    "title": "Contact",
-    "section": "What I’m Looking For",
-    "text": "What I’m Looking For\n\n\n\n\n\n\nTipOpen To\n\n\n\n\nGraduate / Analyst roles in AI-powered business transformation\nBusiness Analyst and Product owner positions\nConsulting opportunities in analytics and digital transformation\nInternships aligned with MSc Business Analytics\npostions that require Analytics and Machine learning expertise\n\n\n\nThanks for visiting my portfolio. I look forward to hearing from you."
+    "objectID": "index.html#hi-im-rohith",
+    "href": "index.html#hi-im-rohith",
+    "title": "Rohith Krishna",
+    "section": "",
+    "text": "I’m a Business Analyst with hands-on Product Management experience, currently pursuing my MSc in Business Analytics at Dublin City University.\nOver the past several years, I’ve worked as a Business Analyst and Scrum Product Owner, bridging the gap between business stakeholders and engineering teams — translating requirements into product roadmaps, owning backlogs, and delivering features that create measurable business value in Agile environments.\nI’m now combining my business analysis and product management background with deeper expertise in analytics, machine learning, and strategy management through my MSc at DCU. My goal is to evolve into roles that sit at the intersection of data-driven decision-making and product strategy — where understanding users, designing solutions, and leveraging ML-powered insights come together.\nThis portfolio showcases my academic projects, technical capabilities, and the professional journey I’m building."
   },
   {
     "objectID": "about.html",
@@ -154,17 +189,101 @@
     "text": "What I’m Working Towards\n\n\n\n\n\n\nTipCareer Goals\n\n\n\nI’m aiming for roles that combine product thinking with analytical depth — such as Product Analyst, Analytics Product Manager, AI/ML Business Analyst, or Data-Driven Consultant. Companies investing in AI adoption, digital transformation, or analytics-led product strategy are where I see my next step.\n\n\nOutside of academics and work, I enjoy fitness, reading, and staying curious about how emerging technologies — particularly generative AI — are reshaping how businesses operate."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Rohith Krishna",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
     "section": "",
-    "text": "I’m a Business Analyst with hands-on Product Management experience, currently pursuing my MSc in Business Analytics at Dublin City University.\nOver the past several years, I’ve worked as a Business Analyst and Scrum Product Owner, bridging the gap between business stakeholders and engineering teams — translating requirements into product roadmaps, owning backlogs, and delivering features that create measurable business value in Agile environments.\nI’m now combining my business analysis and product management background with deeper expertise in analytics, machine learning, and strategy management through my MSc at DCU. My goal is to evolve into roles that sit at the intersection of data-driven decision-making and product strategy — where understanding users, designing solutions, and leveraging ML-powered insights come together.\nThis portfolio showcases my academic projects, technical capabilities, and the professional journey I’m building."
+    "text": "I’m always open to connecting with professionals, recruiters, and fellow students in the data analytics, machine learning, and business transformation space. Whether you’d like to discuss a project, explore a collaboration, or just chat about analytics, feel free to reach out.\n\n\n\n\n\n\nNoteBased in\n\n\n\nDublin / Waterford, Ireland — open to opportunities across Ireland, the UK, and remote roles globally."
   },
   {
-    "objectID": "index.html#hi-im-rohith",
-    "href": "index.html#hi-im-rohith",
-    "title": "Rohith Krishna",
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Contact",
     "section": "",
-    "text": "I’m a Business Analyst with hands-on Product Management experience, currently pursuing my MSc in Business Analytics at Dublin City University.\nOver the past several years, I’ve worked as a Business Analyst and Scrum Product Owner, bridging the gap between business stakeholders and engineering teams — translating requirements into product roadmaps, owning backlogs, and delivering features that create measurable business value in Agile environments.\nI’m now combining my business analysis and product management background with deeper expertise in analytics, machine learning, and strategy management through my MSc at DCU. My goal is to evolve into roles that sit at the intersection of data-driven decision-making and product strategy — where understanding users, designing solutions, and leveraging ML-powered insights come together.\nThis portfolio showcases my academic projects, technical capabilities, and the professional journey I’m building."
+    "text": "I’m always open to connecting with professionals, recruiters, and fellow students in the data analytics, machine learning, and business transformation space. Whether you’d like to discuss a project, explore a collaboration, or just chat about analytics, feel free to reach out.\n\n\n\n\n\n\nNoteBased in\n\n\n\nDublin / Waterford, Ireland — open to opportunities across Ireland, the UK, and remote roles globally."
+  },
+  {
+    "objectID": "contact.html#reach-me-at",
+    "href": "contact.html#reach-me-at",
+    "title": "Contact",
+    "section": "Reach Me At",
+    "text": "Reach Me At\n\n\n\nChannel\nDetails\n\n\n\n\nEmail\ntcrohithkrishna1999@gmail.com\n\n\nLinkedIn\nlinkedin.com/in/linkedin.com/in/rohith-krishna-b6a2b711b\n\n\nGitHub\ngithub.com/rohithkrishna99\n\n\nLocation\nIreland"
+  },
+  {
+    "objectID": "contact.html#professional-references",
+    "href": "contact.html#professional-references",
+    "title": "Contact",
+    "section": "Professional References",
+    "text": "Professional References\nProfessional and academic references are available upon request. Please reach out via email for references from:\n\nMy MSc programme supervisors at Dublin City University\nFormer managers at IBS Software Ltd, Tata Technologies, and TCS\nProject collaborators and teammates"
+  },
+  {
+    "objectID": "contact.html#what-im-looking-for",
+    "href": "contact.html#what-im-looking-for",
+    "title": "Contact",
+    "section": "What I’m Looking For",
+    "text": "What I’m Looking For\n\n\n\n\n\n\nTipOpen To\n\n\n\n\nGraduate / Analyst roles in AI-powered business transformation\nBusiness Analyst and Product owner positions\nConsulting opportunities in analytics and digital transformation\nInternships aligned with MSc Business Analytics\npostions that require Analytics and Machine learning expertise\n\n\n\nThanks for visiting my portfolio. I look forward to hearing from you."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Customer Churn Prediction for E-Commerce\n\n\n\nMachine Learning\n\nXGBoost\n\nPython\n\nClassification\n\n\n\nXGBoost, Random Forest and Logistic Regression to predict customer churn using RFM features on 286,000 e-commerce transactions\n\n\n\nRohith Krishna Thazhathethil Chandraprakash\n\n\nDec 3, 2025\n\n\n\n\n\n\n\n\n\n\n\nFraud Detection Analysis\n\n\n\nMachine Learning\n\nFraud Detection\n\nPython\n\nStatistics\n\n\n\nStatistical and ML-based fraud detection using Logistic Regression and Random Forest on 500 financial transactions\n\n\n\nRohith Krishna Thazhathethil Chandraprakash\n\n\nMar 1, 2025\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html",
+    "href": "projects/list/fraud-detection.html",
+    "title": "Fraud Detection Analysis",
+    "section": "",
+    "text": "This individual project examines a fraud detection dataset to identify patterns distinguishing fraudulent from genuine transactions. Using statistical methods and predictive modelling, it delivers a fraud mitigation strategy for upper management.\n\n\n\n\n\n\nNoteDataset\n\n\n\n500 transactions, 23 variables. Target: is_fraud. Nearly balanced — 246 fraud cases (49.2%) vs 254 legitimate (50.8%)."
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#overview",
+    "href": "projects/list/fraud-detection.html#overview",
+    "title": "Fraud Detection Analysis",
+    "section": "",
+    "text": "This individual project examines a fraud detection dataset to identify patterns distinguishing fraudulent from genuine transactions. Using statistical methods and predictive modelling, it delivers a fraud mitigation strategy for upper management.\n\n\n\n\n\n\nNoteDataset\n\n\n\n500 transactions, 23 variables. Target: is_fraud. Nearly balanced — 246 fraud cases (49.2%) vs 254 legitimate (50.8%)."
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#analysis-pipeline",
+    "href": "projects/list/fraud-detection.html#analysis-pipeline",
+    "title": "Fraud Detection Analysis",
+    "section": "Analysis Pipeline",
+    "text": "Analysis Pipeline\n\n\n\n\n\nflowchart LR\n  A[500 Transactions] --&gt; B[Data Cleaning]\n  B --&gt; C[IQR Outlier Capping]\n  C --&gt; D[One-Hot Encoding]\n  D --&gt; E[75/25 Train-Test Split]\n  E --&gt; F[Z-Score & IQR Flagging]\n  E --&gt; G[Logistic Regression]\n  E --&gt; H[Random Forest 200 trees]\n  F --&gt; I[Insights]\n  G --&gt; I\n  H --&gt; I"
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#fraud-vs-non-fraud-distribution",
+    "href": "projects/list/fraud-detection.html#fraud-vs-non-fraud-distribution",
+    "title": "Fraud Detection Analysis",
+    "section": "Fraud vs Non-Fraud Distribution",
+    "text": "Fraud vs Non-Fraud Distribution\n\n\nCode\nimport plotly.express as px\nimport pandas as pd\n\ndf = pd.DataFrame({\n    'Transaction Type': ['Non-Fraud (Class 0)', 'Fraud (Class 1)'],\n    'Count': [254, 246]\n})\n\nfig = px.bar(df, x='Transaction Type', y='Count',\n             title='Fraud vs Non-Fraud Distribution',\n             color='Transaction Type',\n             color_discrete_map={\n                 'Non-Fraud (Class 0)': '#2980B9',\n                 'Fraud (Class 1)': '#E74C3C'\n             })\nfig.update_layout(template='plotly_white', showlegend=False)\nfig.show()\n\n\n                                                \nThe dataset is balanced with 49.2% fraud and 50.8% legitimate transactions"
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#model-performance",
+    "href": "projects/list/fraud-detection.html#model-performance",
+    "title": "Fraud Detection Analysis",
+    "section": "Model Performance",
+    "text": "Model Performance\n\n\nCode\nimport plotly.graph_objects as go\n\nmetrics = ['Accuracy', 'Fraud Recall', 'Fraud Precision', 'ROC-AUC']\nlogistic = [0.68, 0.74, 0.65, 0.675]\nrandom_forest = [0.70, 0.75, 0.68, 0.692]\n\nfig = go.Figure()\nfig.add_trace(go.Bar(\n    name='Logistic Regression',\n    x=metrics, y=logistic,\n    marker_color='#2980B9'\n))\nfig.add_trace(go.Bar(\n    name='Random Forest',\n    x=metrics, y=random_forest,\n    marker_color='#8E44AD'\n))\n\nfig.update_layout(\n    barmode='group',\n    title='Logistic Regression vs Random Forest',\n    yaxis=dict(range=[0.5, 0.85], title='Score'),\n    template='plotly_white',\n    legend_title='Model'\n)\nfig.show()\n\n\n                                                \nRandom Forest outperforms Logistic Regression across all metrics"
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#key-statistical-findings",
+    "href": "projects/list/fraud-detection.html#key-statistical-findings",
+    "title": "Fraud Detection Analysis",
+    "section": "Key Statistical Findings",
+    "text": "Key Statistical Findings\n\n\nCode\nimport plotly.graph_objects as go\n\ncategories = ['Avg Age', 'Personal Income (k)', 'Credit Score', 'Avg Transaction ($)']\nfraud_vals =     [51.7, 56.2, 645, 1850]\nnon_fraud_vals = [48.6, 64.1, 651, 2100]\n\nfig = go.Figure()\nfig.add_trace(go.Bar(name='Fraud',     x=categories, y=fraud_vals,     marker_color='#E74C3C'))\nfig.add_trace(go.Bar(name='Non-Fraud', x=categories, y=non_fraud_vals, marker_color='#2ECC71'))\n\nfig.update_layout(\n    barmode='group',\n    title='Fraud vs Non-Fraud: Key Feature Comparison',\n    template='plotly_white',\n    legend_title='Class'\n)\nfig.show()\n\n\n                                                \nComparison of key demographic and financial features between fraud and non-fraud groups"
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#model-comparison-table",
+    "href": "projects/list/fraud-detection.html#model-comparison-table",
+    "title": "Fraud Detection Analysis",
+    "section": "Model Comparison Table",
+    "text": "Model Comparison Table\n\n\n\nMetric\nLogistic Regression\nRandom Forest\n\n\n\n\nAccuracy\n0.68\n0.70\n\n\nFraud Recall\n0.74\n0.75\n\n\nFraud Precision\n0.65\n0.68\n\n\nROC-AUC\n0.675\n0.692\n\n\n\n\n\n\n\n\n\nTipConclusion\n\n\n\nRandom Forest provides superior performance and is the preferred model for operational fraud detection. Fraud does not always appear in unusually large transactions — combining ML with statistical flagging (Z-score + IQR) gives the most robust detection approach."
+  },
+  {
+    "objectID": "projects/list/fraud-detection.html#recommendations",
+    "href": "projects/list/fraud-detection.html#recommendations",
+    "title": "Fraud Detection Analysis",
+    "section": "Recommendations",
+    "text": "Recommendations\n\nUse Random Forest as the primary detection model\nImplement real-time transaction risk scoring using model probability outputs\nPrioritise awareness campaigns for older and lower-income customer segments\nCombine Z-score and IQR anomaly checks with ML predictions for a layered defence\n\n\n\n\n\n\n\nNoteStatistical Note\n\n\n\nThe IQR outlier capping method applied boundaries at \\(Q1 - 1.5 \\times IQR\\) (lower) and \\(Q3 + 1.5 \\times IQR\\) (upper) to Transaction Amount, Fraud Amount, Loan Amount, and Income variables."
   }
 ]

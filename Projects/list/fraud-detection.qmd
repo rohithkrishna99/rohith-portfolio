@@ -1,0 +1,151 @@
+---
+title: "Fraud Detection Analysis"
+description: "Statistical and ML-based fraud detection using Logistic Regression and Random Forest on 500 financial transactions"
+author: "Rohith Krishna Thazhathethil Chandraprakash"
+date: "2025-03-01"
+categories: [Machine Learning, Fraud Detection, Python, Statistics]
+---
+
+## Overview
+
+This individual project examines a fraud detection dataset to identify
+patterns distinguishing fraudulent from genuine transactions. Using
+statistical methods and predictive modelling, it delivers a fraud
+mitigation strategy for upper management.
+
+::: {.callout-note}
+## Dataset
+500 transactions, 23 variables. Target: `is_fraud`.
+Nearly balanced — 246 fraud cases (49.2%) vs 254 legitimate (50.8%).
+:::
+
+## Analysis Pipeline
+
+```{mermaid}
+flowchart LR
+  A[500 Transactions] --> B[Data Cleaning]
+  B --> C[IQR Outlier Capping]
+  C --> D[One-Hot Encoding]
+  D --> E[75/25 Train-Test Split]
+  E --> F[Z-Score & IQR Flagging]
+  E --> G[Logistic Regression]
+  E --> H[Random Forest 200 trees]
+  F --> I[Insights]
+  G --> I
+  H --> I
+```
+
+## Fraud vs Non-Fraud Distribution
+
+```{python}
+#| code-fold: true
+#| fig-cap: "The dataset is balanced with 49.2% fraud and 50.8% legitimate transactions"
+
+import plotly.express as px
+import pandas as pd
+
+df = pd.DataFrame({
+    'Transaction Type': ['Non-Fraud (Class 0)', 'Fraud (Class 1)'],
+    'Count': [254, 246]
+})
+
+fig = px.bar(df, x='Transaction Type', y='Count',
+             title='Fraud vs Non-Fraud Distribution',
+             color='Transaction Type',
+             color_discrete_map={
+                 'Non-Fraud (Class 0)': '#2980B9',
+                 'Fraud (Class 1)': '#E74C3C'
+             })
+fig.update_layout(template='plotly_white', showlegend=False)
+fig.show()
+```
+
+## Model Performance
+
+```{python}
+#| code-fold: true
+#| fig-cap: "Random Forest outperforms Logistic Regression across all metrics"
+
+import plotly.graph_objects as go
+
+metrics = ['Accuracy', 'Fraud Recall', 'Fraud Precision', 'ROC-AUC']
+logistic = [0.68, 0.74, 0.65, 0.675]
+random_forest = [0.70, 0.75, 0.68, 0.692]
+
+fig = go.Figure()
+fig.add_trace(go.Bar(
+    name='Logistic Regression',
+    x=metrics, y=logistic,
+    marker_color='#2980B9'
+))
+fig.add_trace(go.Bar(
+    name='Random Forest',
+    x=metrics, y=random_forest,
+    marker_color='#8E44AD'
+))
+
+fig.update_layout(
+    barmode='group',
+    title='Logistic Regression vs Random Forest',
+    yaxis=dict(range=[0.5, 0.85], title='Score'),
+    template='plotly_white',
+    legend_title='Model'
+)
+fig.show()
+```
+
+## Key Statistical Findings
+
+```{python}
+#| code-fold: true
+#| fig-cap: "Comparison of key demographic and financial features between fraud and non-fraud groups"
+
+import plotly.graph_objects as go
+
+categories = ['Avg Age', 'Personal Income (k)', 'Credit Score', 'Avg Transaction ($)']
+fraud_vals =     [51.7, 56.2, 645, 1850]
+non_fraud_vals = [48.6, 64.1, 651, 2100]
+
+fig = go.Figure()
+fig.add_trace(go.Bar(name='Fraud',     x=categories, y=fraud_vals,     marker_color='#E74C3C'))
+fig.add_trace(go.Bar(name='Non-Fraud', x=categories, y=non_fraud_vals, marker_color='#2ECC71'))
+
+fig.update_layout(
+    barmode='group',
+    title='Fraud vs Non-Fraud: Key Feature Comparison',
+    template='plotly_white',
+    legend_title='Class'
+)
+fig.show()
+```
+
+## Model Comparison Table
+
+| Metric | Logistic Regression | Random Forest |
+|--------|--------------------:|:-------------:|
+| Accuracy | 0.68 | **0.70** |
+| Fraud Recall | 0.74 | **0.75** |
+| Fraud Precision | 0.65 | **0.68** |
+| ROC-AUC | 0.675 | **0.692** |
+
+::: {.callout-tip}
+## Conclusion
+Random Forest provides superior performance and is the preferred model
+for operational fraud detection. Fraud does not always appear in
+unusually large transactions — combining ML with statistical flagging
+(Z-score + IQR) gives the most robust detection approach.
+:::
+
+## Recommendations
+
+- Use Random Forest as the primary detection model
+- Implement real-time transaction risk scoring using model probability outputs
+- Prioritise awareness campaigns for older and lower-income customer segments
+- Combine Z-score and IQR anomaly checks with ML predictions for a layered defence
+
+::: {.callout-note}
+## Statistical Note
+The IQR outlier capping method applied boundaries at
+$Q1 - 1.5 \times IQR$ (lower) and $Q3 + 1.5 \times IQR$ (upper)
+to Transaction Amount, Fraud Amount, Loan Amount, and Income variables.
+:::
