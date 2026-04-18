@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Rohith Krishna | Portfolio"   # ← replace with YOUR full name
+  favicon: images/favicon.png
+  navbar:
+    logo: images/logo.png
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: projects/index.qmd
+        text: Projects
+      - href: reflection.qmd
+        text: Reflection
+      - href: contact.qmd
+        text: Contact
+    right:
+      - href: cv/Rohith Krishna - Business Analyst.pdf             # ← replace YourCV.pdf with your exact CV filename
+        text: CV
+        target: _blank
+      - icon: github
+        href: https://github.com/rohithkrishna99   # ← replace with your GitHub username
+        target: _blank
+  page-footer:
+    center: "© 2025 Rohith krishna · Built with Quarto"   # ← replace with your name
+
+format:
+  html:
+    theme: [flatly, styles.scss]
+    toc: true
+    code-fold: true
+    code-tools: true
