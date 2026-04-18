@@ -7,11 +7,11 @@
     "text": "Code"
   },
   {
-    "objectID": "Projects/index.html",
-    "href": "Projects/index.html",
-    "title": "",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
-    "text": "Code"
+    "text": "Customer Churn Prediction\n\n\n\nMachine Learning\n\nPython\n\n\n\nPredicting customer churn using XGBoost and SMOTE\n\n\n\nRohith Kumar\n\n\nJan 15, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "contact.html",
@@ -33,12 +33,5 @@
     "title": "Rohith Krishna",
     "section": "",
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "Projects/list/churn-prediction.html",
-    "href": "Projects/list/churn-prediction.html",
-    "title": "",
-    "section": "",
-    "text": "Code"
   }
 ]

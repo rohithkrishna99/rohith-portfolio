@@ -1,0 +1,22 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+$font-family-base: 'Inter', sans-serif;
+$headings-font-family: 'Inter', sans-serif;
+$navbar-bg: #2C3E50;
+$navbar-fg: #ffffff;
+$body-bg: #ffffff;
+$body-color: #2d2d2d;
+$link-color: #2980B9;
+$headings-color: #2C3E50;
+
+/*-- scss:rules --*/
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+.navbar-brand {
+  font-weight: 600;
+}

@@ -1,0 +1,7 @@
+---
+title: "Customer Churn Prediction"
+description: "Predicting customer churn using XGBoost and SMOTE"
+author: "Rohith Kumar"
+date: "2025-01-15"
+categories: [Machine Learning, Python]
+---
