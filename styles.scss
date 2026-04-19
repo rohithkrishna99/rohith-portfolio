@@ -1,24 +1,176 @@
 /*-- scss:defaults --*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+// Google Font import
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
-$font-family-base: 'Inter', sans-serif;
-$headings-font-family: 'Inter', sans-serif;
-$navbar-bg: #2C3E50;
-$navbar-fg: #ffffff;
+// Typography
+$font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$headings-font-family: 'Playfair Display', 'Inter', serif;
+$font-size-base: 1rem;
+$line-height-base: 1.75;
+
+// Colour palette
+$primary: #2C3E50;
+$secondary: #18BC9C;
+$success: #18BC9C;
+$info: #3498DB;
+$warning: #F39C12;
+$danger: #E74C3C;
+
+// Body
 $body-bg: #ffffff;
 $body-color: #2d2d2d;
-$link-color: #2980B9;
+
+// Links
+$link-color: #18BC9C;
+$link-hover-color: darken(#18BC9C, 10%);
+
+// Navbar
+$navbar-bg: #2C3E50;
+$navbar-fg: #ffffff;
+$navbar-hl: #18BC9C;
+
+// Headings
 $headings-color: #2C3E50;
+$headings-font-weight: 600;
+
+// Code
+$code-bg: #f8f9fa;
+$code-color: #E74C3C;
+
 
 /*-- scss:rules --*/
 
-h1, h2, h3 {
-  font-weight: 600;
+// Global text — justified body content
+body {
+  line-height: 1.75;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+// Paragraphs justified, but exclude special elements
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  margin-bottom: 1rem;
+}
+
+// Don't justify these — they look bad when justified
+h1, h2, h3, h4, h5, h6,
+.navbar, .navbar *,
+table, table *,
+.callout-title, .callout-title *,
+.about-entity, .about-entity *,
+.quarto-grid-item, .quarto-grid-item *,
+.listing-title, .listing-description,
+caption, figcaption,
+code, pre, .sourceCode,
+.page-footer, .page-footer * {
+  text-align: left;
+  hyphens: none;
+}
+
+// Center align headings
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+h1 { font-size: 2.2rem; margin-bottom: 1rem; }
+h2 { font-size: 1.7rem; margin-top: 2rem; margin-bottom: 1rem; }
+h3 { font-size: 1.3rem; }
+
+// Navbar
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 0.7rem 1rem;
 }
 
 .navbar-brand {
   font-weight: 600;
+  font-size: 1.15rem;
+  font-family: 'Playfair Display', serif;
+}
+
+// About page social links
+.about-links .about-link {
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(24, 188, 156, 0.3);
+}
+
+.about-links .about-link:hover {
+  transform: translateY(-2px);
+  background-color: #18BC9C;
+  color: white !important;
+  border-color: #18BC9C;
+}
+
+// Project listing cards
+.quarto-grid-item {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e8e8e8;
+}
+
+.quarto-grid-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+// Callout blocks
+.callout {
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+
+.callout-body {
+  text-align: left;
+}
+
+// Tables
+table {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+}
+
+thead {
+  background-color: #2C3E50;
+  color: white;
+}
+
+thead th {
+  padding: 12px !important;
+  font-weight: 500;
+  text-align: left;
+}
+
+tbody td {
+  text-align: left;
+}
+
+// Code blocks
+pre {
+  border-radius: 8px;
+  border-left: 3px solid #18BC9C;
+}
+
+// Footer
+.page-footer {
+  background-color: #f8f9fa;
+  padding: 1.5rem 0;
+  color: #6c757d;
+  text-align: center;
 }
 
 // Close button on project pages
